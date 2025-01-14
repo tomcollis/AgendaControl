@@ -29,6 +29,6 @@ app.get('/meetingtimer', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`AgendaKeeper running at http://localhost:${port}`);
+  console.log(`AgendaControl running at http://localhost:${port}`);
 });
 

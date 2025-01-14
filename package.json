@@ -1,6 +1,6 @@
 {
-  "name": "AgendaKeeper",
-  "version": "1.0.0",
+  "name": "AgendaControl",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "start": "node server.js"
