@@ -10,8 +10,6 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
-// v1 - app.use(express.static(join(__dirname, 'public')));
-// Custom middleware to serve static files
 app.use((req, res, next) => {
   const filePath = join(__dirname, "public", req.path);
   if (fs.existsSync(filePath) && fs.lstatSync(filePath).isFile()) {
