@@ -1,5 +1,5 @@
 ---
 deployment:
       tasks:
-        - export DEPLOYPATH=/agendacontrol_pub/
+        - export DEPLOYPATH=/agendacontrol/
         - /bin/cp -R public $DEPLOYPATH
