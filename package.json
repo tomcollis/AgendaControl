@@ -1,12 +1,22 @@
 {
   "name": "AgendaControl",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "type": "module",
-  "scripts": {
-    "start": "node loader.cjs"
-  },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.2"
-  }
+  },
+  "scripts": {
+    "start": "node loader.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomcollis/AgendaControl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomcollis/AgendaControl/issues"
+  },
+  "homepage": "https://github.com/tomcollis/AgendaControl#readme"
 }
