@@ -1,17 +1,15 @@
-FROM node:18.20.4-alpine
+FROM node:18.20.4
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+WORKDIR /app
 
-WORKDIR /home/node/app
-
-COPY . .
-
-USER node
+COPY package*.json ./
 
 RUN npm install
 
-COPY --chown=node:node . .
+COPY . .
+
+ENV PORT=3000
 
 EXPOSE 3000
 
-CMD [ "node", "loader.cjs" ]
+CMD [ "npm", "start" ]
