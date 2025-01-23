@@ -20,9 +20,9 @@ function updateTimer(minutes, seconds, timerElement, totalDuration) {
     const remainingTime = minutes * 60 + seconds;
     const remainingPercentage = (remainingTime / totalDuration) * 100;
     if (remainingPercentage <= 20) {
-        timerElement.classList.add('warning');
+        document.getElementById('pri-container').classList.add('warning');
     } else {
-        timerElement.classList.remove('warning');
+        document.getElementById('pri-container').classList.remove('warning');
     }
 }
 
