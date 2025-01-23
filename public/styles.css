@@ -34,7 +34,7 @@ h2 {
     font-weight: bold;
     color: #007bff;
 }
-.next-button {
+.next-button, footer a {
     font-size: 1.2rem;
     padding: 10px 20px;
     background-color: #28a745;
@@ -42,7 +42,12 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.next-button {
     transition: background-color 0.3s;
+}
+footer a {
+    text-decoration: none;
 }
 .next-button:hover {
     background-color: #218838;
