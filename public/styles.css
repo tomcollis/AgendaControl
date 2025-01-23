@@ -8,12 +8,10 @@ body {
     margin: 0;
     background-color: #f0f0f0;
 }
-
 #timer-container {
     text-align: center;
     margin-bottom: 20px;
 }
-
 .timer-item {
     background-color: #ffffff;
     border-radius: 10px;
@@ -21,23 +19,19 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
-
 .timer-item.warning {
     background-color: #ffff99; /* Light yellow for warning state */
 }
-
 h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #333;
 }
-
 .time-display {
     font-size: 4rem;
     font-weight: bold;
     color: #007bff;
 }
-
 .next-button {
     font-size: 1.2rem;
     padding: 10px 20px;
@@ -48,16 +42,13 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 .next-button:hover {
     background-color: #218838;
 }
-
 .next-button:disabled {
     background-color: #6c757d;
     cursor: not-allowed;
 }
-
 footer {
     position: fixed;
     bottom: 10px;
@@ -65,4 +56,32 @@ footer {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    #timer-container {
+        width: 100%;
+    }
+    #next-item {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Tablet-specific styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        padding: 2rem;
+    }
+    #timer-container {
+        width: 75%;
+    }
+    #next-item {
+        width: 70%;
+        padding: 1rem;
+    }
 }
