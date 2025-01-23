@@ -59,7 +59,7 @@ document.getElementById('next-item').addEventListener('click', () => {
 
 // Show Next Item
 function showNextItem() {
-    const container = document.getElementById('timer-container');
+    const container = document.getElementById('time-container');
     container.innerHTML = '';
     const timerElement = createTimerElement(agendaItems[currentItemIndex], timeItems[currentItemIndex]);
     container.appendChild(timerElement);
