@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div id="pri-container">
-        <div id="time-container"></div>
-        <button id="next-item" class="next-button">Next Item</button>
-    </div>
-    <script src="/main.js"></script>
-    <script>
-        const agendaItems = <%- JSON.stringify(agendaItems) %>;
-        const timeItems = <%- JSON.stringify(timeItems) %>;
-        let currentItemIndex = 0;
-        let currentInterval;
-
-        showNextItem();
-    </script>
+<main>
+    <div id="time-container"></div>
+    <button id="next-item" class="next-button">Next Item</button>
+</main>
+<script src="/main.js"></script>
+<script>
+    const agendaItems = <%- JSON.stringify(agendaItems) %>;
+    const timeItems = <%- JSON.stringify(timeItems) %>;
+    let currentItemIndex = 0;
+    let currentInterval;
+    showNextItem();
+</script>
 <footer>
     <a href="#">Link 1</a>
     <a href="#">Link 2</a>

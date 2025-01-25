@@ -1,25 +1,46 @@
+/* Debug Start 
+* { outline: 1px solid red; }
+@media (min-width: 100vw) {
+    * {
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+}
+ Debug End */
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+    max-width: 100vw;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 5% auto 0;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+footer {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+    width: 100%
 }
 #time-container {
     text-align: center;
     margin-bottom: 20px;
-}
-#pri-container {
-    text-align: center;
-    min-width: 25%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
 }
 .timer-item.warning {
     background-color: #ffff99; /* Light yellow for warning state */
@@ -48,6 +69,7 @@ h2 {
 }
 footer a {
     text-decoration: none;
+    margin: 0 10px
 }
 .next-button:hover {
     background-color: #218838;
@@ -56,36 +78,25 @@ footer a {
     background-color: #6c757d;
     cursor: not-allowed;
 }
-footer {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
 
 /* Mobile-specific styles */
 @media (max-width: 600px) {
-    body {
-        padding: 1rem;
-    }
-    #pri-container {
+    main {
         width: 100%;
+        margin: 0 auto;
+        box-shadow: none;
     }
     #next-item {
-        width: 100%;
+        width: 90%;
         padding: 1rem;
     }
 }
-
 /* Tablet-specific styles */
 @media (min-width: 601px) and (max-width: 1024px) {
-    body {
-        padding: 2rem;
-    }
-    #pri-container {
+    main {
         width: 75%;
+        margin: 0 auto;
+        box-shadow: none;
     }
     #next-item {
         width: 70%;
