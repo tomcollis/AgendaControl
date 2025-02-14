@@ -1,19 +1,27 @@
 # AgendaControl
 
+[![GitHub stars](https://img.shields.io/github/stars/tomcollis/AgendaControl?style=for-the-badge)](https://github.com/tomcollis/AgendaControl/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/tomcollis/AgendaControl?style=for-the-badge)](https://github.com/tomcollis/AgendaControl/issues)
+[![Github All Releases download count](https://img.shields.io/github/downloads/tomcollis/AgendaControl/total.svg?style=for-the-badge)](https://github.com/tomcollis/AgendaControl/releases/latest)
+[![GitHub latest release version](https://img.shields.io/github/v/release/tomcollis/AgendaControl.svg?style=for-the-badge)](https://github.com/tomcollis/AgendaControl/releases/latest)
+
 ## Overview
 
 AgendaControl is a web application that allows users to dynamic define a meeting agenda with a timer.
-The aim is to improveme meetings and maintain momemtum while sticking to the planned agenda.
+The aim is to improve meetings and maintain momemtum by sticking to the planned agenda.
 
 The URL paramters determine the meeting's agenda and timings. As shown in the [Examples](#example-meeting-agendas) below.
+
+If you like this idea or find the app useful, why not?
+
+[![Buy me coffee](https://img.shields.io/badge/Buy%20me%20-coffee!-orange.svg?style=for-the-badge&logo=buy-me-a-coffee&color=6F4E37)](https://paypal.me/TomCollisUK/4)
 
 ## Features
 
 - Create meeting agendas
-- Defined times for agenda items
+- Defined times for agenda items (maximumL: 10)
 - Reusable URL for regular meetings
 - Information and Agendas are never stored and are instead created dynamically based on the URL parameters to ensure privacy
-- Basic analytics are used to track app usage
 
 ## Requirements
 
@@ -41,7 +49,7 @@ The URL paramters determine the meeting's agenda and timings. As shown in the [E
 - **Timeline and Milestones** (20 minutes)
 - **Q&A Session** (15 minutes)
 
-> meetingtimer?agenda=Welcome,Project%20Overview,Roles%20and%20Responsibilities,Timeline%20and%20Milestones,Q%26A%20Session&times=10,15,10,20,15
+> meetingtimer?agenda=Welcome,Project Overview,Roles and Responsibilities,Timeline and Milestones,Q%26A Session&times=10,15,10,20,15
 
 ### Example 2: Team Standup Meeting
 - **Yesterday's Work Review** (5 minutes)
