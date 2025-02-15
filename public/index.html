@@ -3,10 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda Control</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Agenda and Time Form</title>
+    <link rel="stylesheet" href="/home.css">
+    <script>
+        let currentRows = 2;
+        function generateURL() {
+            const agendas = [];
+            const times = [];
+            for (let i = 1; i <= 10; i++) {
+                const agendaValue = document.getElementById('agenda' + i).value;
+                const timeValue = document.getElementById('time' + i).value;
+                if (agendaValue) {
+                    agendas.push(encodeURIComponent(agendaValue));
+                    times.push(encodeURIComponent(timeValue));
+                }
+            }
+            const url = 'meetingtimer?agenda=' + agendas.join(',') + '&times=' + times.join(',');
+            return url;
+        }
+        function loadURL() {
+            const url = generateURL();
+            window.location.href = window.location.origin + '/' + url;
+        }
+        function copyURLToClipboard() {
+            const url = window.location.origin + '/' + generateURL();
+            navigator.clipboard.writeText(url).then(() => {
+                alert('URL copied to clipboard: ' + url);
+            }, (err) => {
+                alert('Failed to copy URL: ' + err);
+            });
+        }
+        function addRow() {
+            if (currentRows < 10) {
+                currentRows++;
+                const row = document.createElement('tr');
+                row.innerHTML = '<td><input type="text" id="agenda' + currentRows + '" name="agenda' + currentRows + '"></td>' +
+                                '<td><input type="number" id="time' + currentRows + '" name="time' + currentRows + '"></td>';
+                document.getElementById('table-body').appendChild(row);
+                // Move the add button to the end of the last row
+                const addRowContainer = document.getElementById('add-row-container');
+                document.getElementById('table-body').appendChild(addRowContainer);
+            }
+            if (currentRows === 10) {
+                document.getElementById('addRowBtn').style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
+    <main>
+        <h2>Create Meeting</h2>
+        <form onsubmit="loadURL(); return false;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Agenda</th>
+                        <th>Time (minutes)</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td><input type="text" id="agenda1" name="agenda1"></td>
+                        <td><input type="number" id="time1" name="time1"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="agenda2" name="agenda2"></td>
+                        <td><input type="number" id="time2" name="time2"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div id="form-buttons">
+                <input type="submit" value="Load URL">
+                <input type="button" value="Copy URL to Clipboard" onclick="copyURLToClipboard()">
+            </div>
+        </form>
+        <div id="add-row-container" class="add-row-container">
+            <button type="button" class="add-row-btn" id="addRowBtn" onclick="addRow()">+</button>
+        </div>
+    </main>
 </body>
 </html>
-
