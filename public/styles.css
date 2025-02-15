@@ -40,7 +40,7 @@ footer {
     text-align: center;
     margin-bottom: 20px;
 }
-.timer-item.warning {
+main.warning {
     background-color: var(--warning-color);
 }
 h2 {
