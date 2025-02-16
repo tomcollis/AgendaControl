@@ -40,6 +40,9 @@
                 row.innerHTML = '<td><input type="text" id="agenda' + currentRows + '" name="agenda' + currentRows + '"></td>' +
                                 '<td><input type="number" id="time' + currentRows + '" name="time' + currentRows + '"></td>';
                 document.getElementById('table-body').appendChild(row);
+                // Move the add button to the end of the last row
+                const addRowContainer = document.getElementById('add-row-container');
+                document.getElementById('table-body').appendChild(addRowContainer);
             }
             if (currentRows === 10) {
                 document.getElementById('addRowBtn').style.display = 'none';
@@ -73,11 +76,10 @@
             <div id="form-buttons">
                 <input type="submit" value="Start Timer">
                 <input type="button" value="Copy Timer URL" onclick="copyURLToClipboard()">
+                <input type="button" id="addRowBtn" value="+" onclick="addRow()">
             </div>
         </form>
-        <div id="add-row-container">
-            <button type="button" class="add-row-btn" id="addRowBtn" onclick="addRow()">+</button>
-        </div>
+
     </main>
 </body>
 </html>
