@@ -6,6 +6,45 @@
     --btn-hover-color: #218838;
 }
 
+/* Homepage Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+#form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+input[type="text"], input[type="number"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"], input[type="button"] {
+    width: calc(50% - 12px);
+}
+.add-row-btn {
+    margin: 10px 0;
+}
+#add-row-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Timer and Shared Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -53,8 +92,8 @@ h2 {
     font-weight: bold;
     color: var(--primary-color);
 }
-.next-button, footer a {
-    font-size: 1.2rem;
+.add-row-btn, .next-button, footer a, input[type="submit"], input[type="button"] {
+    font-size: 0.8rem;
     padding: 10px 20px;
     background-color: var(--btn-primary-color);
     color: white;
@@ -62,7 +101,8 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
 }
-.next-button {
+#next-item {
+    font-size: 2rem;
     transition: background-color 0.3s;
 }
 footer a {
@@ -72,7 +112,7 @@ footer a {
     min-width: 100px;
     max-width: 200px;
 }
-footer a:hover, .next-button:hover {
+footer a:hover, .next-button:hover, input[type="submit"]:hover, input[type="button"]:hover {
     background-color: var(--btn-hover-color);
 }
 .next-button:disabled {

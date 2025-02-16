@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda and Time Form</title>
-    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/styles.css">
     <script>
         let currentRows = 2;
         function generateURL() {
@@ -40,9 +40,6 @@
                 row.innerHTML = '<td><input type="text" id="agenda' + currentRows + '" name="agenda' + currentRows + '"></td>' +
                                 '<td><input type="number" id="time' + currentRows + '" name="time' + currentRows + '"></td>';
                 document.getElementById('table-body').appendChild(row);
-                // Move the add button to the end of the last row
-                const addRowContainer = document.getElementById('add-row-container');
-                document.getElementById('table-body').appendChild(addRowContainer);
             }
             if (currentRows === 10) {
                 document.getElementById('addRowBtn').style.display = 'none';
@@ -74,11 +71,11 @@
             </table>
             <br>
             <div id="form-buttons">
-                <input type="submit" value="Load URL">
-                <input type="button" value="Copy URL to Clipboard" onclick="copyURLToClipboard()">
+                <input type="submit" value="Start Timer">
+                <input type="button" value="Copy Timer URL" onclick="copyURLToClipboard()">
             </div>
         </form>
-        <div id="add-row-container" class="add-row-container">
+        <div id="add-row-container">
             <button type="button" class="add-row-btn" id="addRowBtn" onclick="addRow()">+</button>
         </div>
     </main>
